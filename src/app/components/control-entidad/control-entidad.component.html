@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <app-listado-entidad [personas]="personaspadre" (personaClicked)="personaClicked($event)"></app-listado-entidad>
+    </div>
+    <div class="col-4">
+      <app-detalle-entidad [persona]="personaDetalle"></app-detalle-entidad>
+    </div>
+  </div>
+
+</div>
+
