@@ -1,7 +1,15 @@
+<div *ngIf="persona" class="mt-5">
+  <img [src]="persona.FotoPerfil" alt="persona" width="200">
+  <h2>{{ persona.Nombre }} {{ persona.Apellido }}</h2>
+  <hr />
+  <small>{{ persona.FechaNac }}</small>
 
-  <div *ngIf="persona" class="mt-5">
-    <h2>{{ persona.Nombre }} {{ persona.Apellido }}</h2>
-    <hr />
-    <small>{{ persona.FechaNac }}</small>
-  </div>
+</div>
 
+<div *ngIf="pais" class="mt-5">
+  <img [src]="pais.flag" alt="bandera" width="200">
+  <hr />
+  <h2>pais: {{ pais.name }} - capital: {{ pais.capital }}</h2>
+</div>
+
+<app-boton-entidad [pais]="pais" [persona]="persona" (removerPersona)="onDeletePersona($event)" (removerPais)="onDeletePais($event)"></app-boton-entidad>

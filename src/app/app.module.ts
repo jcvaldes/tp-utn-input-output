@@ -8,6 +8,7 @@ import { ControlEntidadComponent } from './components/control-entidad/control-en
 import { ListadoEntidadComponent } from './components/listado-entidad/listado-entidad.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-entidad.component';
+import { BotonEntidadComponent } from './components/boton-entidad/boton-entidad.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-en
     BienvenidoComponent,
     ControlEntidadComponent,
     ListadoEntidadComponent,
-    DetalleEntidadComponent
+    DetalleEntidadComponent,
+    BotonEntidadComponent
   ],
   imports: [
     BrowserModule,

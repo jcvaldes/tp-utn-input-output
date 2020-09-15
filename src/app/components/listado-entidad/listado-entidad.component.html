@@ -1,18 +1,46 @@
+
+<h2>Listado de Personas</h2>
+<hr>
 <div class="card-columns m-5 animated fadeIn">
+
   <div class="card puntero" *ngFor="let persona of personas">
     <img
       alt="Card image cap"
       class="card-img-top"
-      [src]="persona.FotoPerfil"
+      src="{{persona.FotoPerfil}}"
+
     />
     <div class="card-body">
       <h5 class="card-title">{{ persona.Apellido }}</h5>
       <small>{{persona.FechaNac | date: 'dd/MM/yyyy'}}</small>
+      <h6></h6>
       <p class="card-text">
         <span class="badge badge-pill badge-primary">Marshmello</span>
         <span class="badge badge-pill badge-primary">Demi Lovato</span>
       </p>
       <button type="button" (click)="clickPersona(persona)" class="btn btn-primary btn-lg btn-block">Detalle</button>
+    </div>
+  </div>
+</div>
+
+<h2>Listado de Paises</h2>
+<hr>
+<div class="card-columns m-5 animated fadeIn">
+  <div class="card puntero" *ngFor="let pais of paises">
+    <img
+      alt="Card image cap"
+      class="card-img-top"
+      [src]="pais.flag"
+
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ pais.name }}</h5>
+      <small>{{pais.capital }}</small>
+      <p class="card-text">
+        <span class="badge badge-pill badge-primary">Marshmello</span>
+        <span class="badge badge-pill badge-primary">Demi Lovato</span>
+      </p>
+      <button type="button" (click)="clickPais(pais)" class="btn btn-primary btn-lg btn-block">Detalle</button>
     </div>
   </div>
 </div>
