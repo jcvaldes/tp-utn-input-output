@@ -12,4 +12,4 @@
   <h2>pais: {{ pais.name }} - capital: {{ pais.capital }}</h2>
 </div>
 
-<app-boton-entidad [pais]="pais" [persona]="persona" (removerPersona)="onDeletePersona($event)" (removerPais)="onDeletePais($event)"></app-boton-entidad>
+<app-boton-entidad [pais]="pais" [persona]="persona" (removerPersona)="onDeletePersona()" (removerPais)="onDeletePais()"></app-boton-entidad>
